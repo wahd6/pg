@@ -1,0 +1,32 @@
+/*
+
+@import "vendors/bootstrap";
+@import "vendors/bootstrap-select";
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css";
+@import "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css";
+@import "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css";
+@import 'https://fonts.googleapis.com/css?family=Gothic+A1:100,200,300,400,500,600,700,800,900';
+ 
+@import 'abstracts/variables';
+@import 'abstracts/functions';
+@import 'abstracts/mixins';
+
+@import 'base/base';
+@import 'base/animations';
+@import 'base/typography';
+@import 'base/utilities';
+
+@import 'components/button';
+   
+@import 'layout/header';
+@import 'layout/footer';
+
+
+@import 'pages/login'; 
+@import 'pages/home';
+@import 'pages/tabs';
+@import 'pages/uni_assessments';
+@import 'pages/assessments';
+@import 'pages/uni_open_page';      
+        
+*/

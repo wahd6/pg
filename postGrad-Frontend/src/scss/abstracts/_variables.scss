@@ -1,0 +1,50 @@
+$brand-primary:#ffbc00;
+$brand-secondary:#3faccd;
+$white:#ffffff;
+$black: #000000;
+$graythick: #47525e;
+$gray:#7e7e7e;
+$gray1:#bdbdbd; 
+$bordercolor:#ebeef5;
+
+ 
+$gray3: #626262;
+$gray4: #ebebeb;
+$gray5: #2c2c2c;
+$light_gray: #e1e1e1;
+
+//share colors
+$facebook: #4b6fab;
+$linkedin: #0090c4;
+$twitter: #66bcf5;
+$googleplus: #e24e36;
+$pintrest: #ea3f3f;
+$message: #45a4d5;
+
+// Font Weights
+$font_thin      	: 100;
+$font_light     	: 300;
+$font_normal    	: 400;
+$font_medium    	: 500;
+$font_semi_bold	    : 600; 
+$font_bold      	: 700;
+
+//Font Family ()
+$helvetica    		: 'Gothic A1', sans-serif ;
+$fontawesome        : FontAwesome;
+
+//media queries
+$screen-ex-lg-max: 1500px;
+$screen-lg-max: 1366px;
+$screen-lg-min: 1170px;
+$screen-md-max: ($screen-lg-min - 1);
+$screen-md-min: 992px;
+$screen-sm-max: ($screen-md-min - 1);
+$screen-sm-min: 768px;
+$screen-xs-max: ($screen-sm-min - 1);
+$screen-xxs-min: 568px;
+$screen-xxs-max: ($screen-xxs-min - 1);
+
+
+
+

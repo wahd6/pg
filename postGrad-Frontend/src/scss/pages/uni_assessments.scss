@@ -1,0 +1,134 @@
+
+/****************** Uni Assessments Styles Here ******************/
+.uni_banner{
+  padding: 0;
+  margin: 78px 0 0;
+  width: 100%;
+  min-height: 300px;
+  background: url(/../../assets/images/banner-img.jpg) no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+  &:after{
+    content:"";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right, #00a8db87, rgba(255, 188, 1, 0.47));
+    background-color: rgba(0, 168, 219, 0.63);
+  }
+  .banner_main{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    display: table;
+    position: relative;
+    z-index: 999999999999999;
+    width: 100%;
+    transform: translateY(85px);
+  }
+  .banner_info{
+    padding: 0;
+    margin: 0;
+    display: table-cell;
+    vertical-align: middle;
+    height: 100%;
+  }
+  .banner_info h1{
+    font-size: 35px;
+    color:$white;
+    font-weight: bold;
+    text-align: center;
+    margin: 0 0 40px;
+  }
+    .drop_list{
+      padding: 0;
+      margin: 0 auto;
+      width: 75%;
+      label{
+        padding: 0 0 5px;
+        margin: 0;
+        color:$white;
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: 0;
+        text-transform: capitalize;
+        text-align: center;
+      }
+    }
+
+}
+.uni_main{
+  padding:40px 0;
+  margin: 0;
+  .uni_main_left{
+    padding: 0;
+    margin: 0;
+    .uni_logo{
+      width: 110px;
+      height: 110px;
+      float: left;
+      background: #ffffff;
+      padding: 0;
+      margin:0 18px 0 0;
+      box-shadow:2px 2px 6px #d2d2d2;
+      img{
+        width: 100%;
+      }
+    }
+    .uni_info{
+      padding: 0;
+      margin: 0;
+      width:64%;
+      float: left;
+      h3{
+        padding: 0 0 5px;
+        margin: 0;
+        color: #47525e;
+      }
+      h6{
+        font-size: 13px;
+        padding: 0 0 10px;
+        color: #47525e;
+        span{
+          color: $brand-primary;
+          font-weight: bold;
+          font-size: 17px;
+        }
+      }
+      .grad_info{
+        padding: 0;
+        margin: 0;
+        li{
+          width: 50%;
+          float: left;
+          padding: 0;
+          margin: 0;
+          h4{
+            font-size: 13px;
+            color: #ccc;
+            margin: 0;
+            padding: 0;
+          }
+          p{
+            color: $brand-secondary;
+          }
+        }
+      }
+      
+    }
+    
+  }
+  .uni_main_right{
+    padding: 0;
+    margin: 0;
+  }
+}
+
+
+
+
+
+
+
+

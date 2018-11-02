@@ -1,0 +1,286 @@
+.container {
+	width: 100%;
+	max-width: 1200px;
+}  
+/****************** Student Profile Page Styles Here ******************/
+.student_profile{
+	padding: 35px 0 0;
+  margin: 78px 0 0;
+	.student_profile_left{
+		padding: 15px 17px;
+		margin: 0;
+		box-shadow: 0 0 6px #d2d2d2;
+    border: solid 1px #d8d8d8;
+		border-radius:8px;
+		/*@include border('all', 1px, solid, $bordercolor);
+		@include border-radius(4px); */
+		.heading{
+			padding: 0 0 14px;
+			margin: 0;
+			border-bottom: solid 1px #ebeef5;
+			/*@include border('bottom', 1px, solid, $bordercolor);*/
+			h2{
+				font-weight: normal;
+				display: inline-block;
+				padding: 0;
+				margin: 0;
+				color:$graythick;
+			}
+			.edit{
+				background:$brand-primary;
+        padding:2px 19px;
+        float: right;
+        @include border-radius(4px);
+        color:$black;
+        cursor: pointer;
+        outline: none;
+			} 
+		}
+			.photo_block{
+				padding: 20px 0 30px;
+    		margin: 0 0 20px;
+				border-bottom: solid 1px #ebeef5;
+			/*@include border('bottom', 1px, solid, $bordercolor);*/
+				.photo_block_left{
+					float: left;
+					width: 140px;
+    			height: 140px;
+					border: solid 3px #ebeef5;
+					border-radius:100%;
+					/*@include border('all', 3px, solid, $bordercolor);
+					@include border-radius(30px);*/
+					img{
+						width: 100%;
+						height: auto;
+					}
+				}
+				.photo_block_right{
+					float: right;
+					padding: 0;
+					margin:10px 0 0 0;
+					h4{
+						padding: 0 0 5px;
+				    margin: 0;
+				    font-size: 14px;
+				    font-weight: normal;
+					}
+					ul{
+						padding: 0;
+						margin: 0;
+						li{
+							padding:0;
+							margin: 0;
+							position: relative;
+							list-style-type: disc;
+    					font-size: 9px;
+    					color: #ccc;
+    					line-height: 7px;
+							p{
+								margin: 0px;
+						    padding: 0px;
+						    font-size: 12px;
+						    color: #ccc;
+							}
+						}
+					}
+					.file-field{
+						position: relative;
+				    border: solid 1px #ccc;
+				    border-radius: 5px;
+				    text-align: center;
+				    padding: 0;
+				    margin: 10px 0 0;
+				    cursor: pointer;
+				    .btn{
+				    	padding: 0;
+					    margin: -3px 0 0;
+					    color: #ccc;
+					    line-height: 15px;
+							input{
+								position: absolute;
+						    top: 0;
+						    right: 0;
+						    left: 0;
+						    bottom: 0;
+						    width: 100%;
+						    margin: 0;
+						    padding: 0;
+						    cursor: pointer;
+						    opacity: 0;
+							}
+						}
+					}
+					
+				}
+			}
+		
+		.form_section{
+			padding: 0;
+			margin: 0;
+			.form-group {
+		    margin-bottom: 12px;
+		    padding: 0 3px;
+		    label {
+			    display: inline-block;
+			    max-width: 100%;
+			    margin-bottom: 2px;
+			    font-weight: normal;
+			    font-size: 14px;
+			    color: #888888;
+				}
+			}
+		}
+			
+	}
+
+	/***** Profile Right Section Start **********/
+	.profile_right{
+		margin: 0;
+		p{
+			padding: 0;
+			margin: 0 0 20px;
+		}
+		.next_btn{
+			background: #47525e;
+	    padding: 5px 30px;
+	    border-radius: 5px;
+	    color: #ffffff;
+	    text-align: center;
+	    position: absolute;
+	    top: -3px;
+	    right: 17px;
+		}
+		.info_list{
+			padding: 12px 20px;
+    	margin: 0 0 15px;
+    	background:$white;
+			box-shadow: 0 0 6px #d2d2d2;
+    border: solid 1px #d8d8d8;
+			border-radius: 8px;
+			.tab_content_main{
+				margin:13px 0 0 !important;
+				padding: 0;
+			}
+			h2{
+				padding: 0 0 9px;
+		    margin: 0 0 5px;
+		    border-bottom: solid 1px #ebeef5;
+		    font-weight: bold;
+		    color: #47525e;
+			}
+			.list_items{
+				padding: 0;
+				margin: 0;
+				li{
+					float: left;
+			    display: inline-block;
+			    padding: 0;
+			    margin: 11px 0;
+			    width: 100%;
+			    max-width: 232px;
+					/* informtion List Styles */
+					.info_list_checkbox {
+					    display: block;
+					    position: relative;
+					    padding-left: 42px;
+					    line-height: 32px;
+					    margin-bottom: 0;
+					    font-size: 14px;
+					    cursor: pointer;
+					    font-weight: normal;
+					    -webkit-user-select: none;
+					    -moz-user-select: none;
+					    -ms-user-select: none;
+					    user-select: none;
+					}
+
+					/* Hide the browser's default checkbox */
+					.info_list_checkbox input {
+					    position: absolute;
+					    opacity: 0;
+					    cursor: pointer;
+					    height: 0;
+					    width: 0;
+					}
+
+					/* Create a custom checkbox */
+					.checkmark {
+					    font-size: 24px;
+					    font-weight: bold;
+					    line-height: 24px;
+					    position: absolute;
+					    color: #ffffff;
+					    top: 0;
+					    left: 0;
+					    padding: 4px 10px;
+					    background-color: #7e7e7e;
+					    text-align: center;
+					    border-radius: 100%;
+					}
+
+					/* On mouse-over, add a grey background color */
+					.info_list_checkbox:hover input ~ .checkmark {
+					    background-color: #ccc;
+					}
+
+					/* When the checkbox is checked, add a blue background */
+					.info_list_checkbox input:checked ~ .checkmark {
+					    background-color:$brand-secondary;
+					        font-size: 0;
+					    padding: 5px 17px;
+					}
+
+					/* Create the checkmark/indicator (hidden when not checked) */
+					.checkmark:after {
+					    content: "";
+					    position: absolute;
+					    display: none;
+					}
+
+					/* Show the checkmark when checked */
+					.info_list_checkbox input:checked ~ .checkmark:after {
+					    display: block;
+					}
+
+					/* Style the checkmark/indicator */
+					.info_list_checkbox .checkmark:after {
+					left: 13px;
+					    top: 6px;
+					    text-align: center;
+					    width: 10px;
+					    height: 17px;
+					    border: solid white;
+					    border-width: 0 3px 3px 0;
+					    -webkit-transform: rotate(45deg);
+					    -ms-transform: rotate(45deg);
+					    transform: rotate(45deg);
+					}
+				}
+				
+			}
+			.current_location{
+				li{
+					width: 139px;
+					padding: 13px 10px !important;
+				}
+			}
+			.done_btn{
+				bottom: -35px;
+    		top: inherit;
+			}
+
+		}
+
+	}
+
+}
+
+
+
+
+
+
+
+
+
+

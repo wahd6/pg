@@ -1,0 +1,89 @@
+
+/****************** Tabs Styles Here ******************/
+.tab_content p{
+	padding: 3px 0 !important;
+	margin: 0 0 5px !important;
+	color:$brand-secondary;
+	border-bottom: 1px solid $brand-secondary !important;
+}
+.resp-tabs-list li{
+	font-weight: 600;
+  font-size: 13px;
+  color:$white;
+  display: inline-block;
+  padding:5px 10px !important;
+  line-height: 16px;
+  margin: 0 6px 0 0;
+  list-style: none;
+  cursor: pointer;
+  width: 115px;
+  float: left;
+  text-align: center;
+  border-radius:3px;
+}
+.resp-tab-active {
+   border:none !important; 
+  border-bottom: none;
+  margin-bottom: -1px !important;
+  padding:5px 5px 5px 5px !important;
+  border-top:none !important; 
+  border-bottom: 0px #fff solid !important;
+}
+.resp-tab-active {
+  background-color:$brand-secondary !important;
+  color:$white !important;
+  position: relative;
+}
+.resp-tabs-list li:hover{
+  background-color:$brand-secondary !important;
+  color:$white !important;
+  transition: all ease-in-out 0.4s;
+}
+.resp-tab-content {
+  border-top: 1px solid $brand-secondary !important;
+  margin: 25px 0 0;
+  margin: 25px 0 0;
+	border: none;
+}
+.resp-tab-active.active::after {
+    content: "";
+    position: absolute;
+    left: 42%;
+    top: 100%;
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-top: 12px solid #21a7c1;
+    clear: both;
+}
+.resp-tab-active:after, .resp-tab-active:before {
+    bottom: -62%;
+    left:65%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+.resp-tab-active:before {
+    border-color: rgba(194, 225, 245, 0);
+    border-bottom-color: #3faccd;
+    border-width: 15px;
+    margin-left: -36px;
+}
+.resp-tab-active:after {
+    border-color: rgba(136, 183, 213, 0);
+    border-bottom-color: #ffffff;
+    border-width: 14px;
+    margin-left: -35px;
+}
+
+
+
+
+
+
+
+
