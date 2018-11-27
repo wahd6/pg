@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 26, 2018 at 02:39 PM
+-- Generation Time: Nov 27, 2018 at 09:00 AM
 -- Server version: 10.1.36-MariaDB
 -- PHP Version: 7.2.11
 
@@ -36,6 +36,13 @@ CREATE TABLE `continent` (
   `updated_on` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `continent`
+--
+
+INSERT INTO `continent` (`name`, `created_by`, `updated_by`, `created_on`, `updated_on`) VALUES
+('North America', '', '', '2018-11-27 07:36:07', '0000-00-00 00:00:00');
+
 -- --------------------------------------------------------
 
 --
@@ -51,6 +58,13 @@ CREATE TABLE `country` (
   `created_by` varchar(100) NOT NULL,
   `updated_by` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `country`
+--
+
+INSERT INTO `country` (`name`, `continent`, `region`, `created_on`, `updated_on`, `created_by`, `updated_by`) VALUES
+('Colorado', 'North America', 'West', '2018-11-27 07:40:57', '0000-00-00 00:00:00', '', '');
 
 -- --------------------------------------------------------
 
@@ -69,6 +83,7 @@ CREATE TABLE `course` (
   `qualification` varchar(100) NOT NULL,
   `delivery_mode` varchar(100) NOT NULL,
   `university` varchar(100) NOT NULL,
+  `active` tinyint(1) NOT NULL,
   `created_on` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `updated_on` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `created_by` varchar(100) NOT NULL,
@@ -83,11 +98,19 @@ CREATE TABLE `course` (
 
 CREATE TABLE `course_category` (
   `name` varchar(100) NOT NULL,
+  `active` tinyint(1) NOT NULL,
   `created_by` varchar(100) NOT NULL,
-  `created_on` datetime NOT NULL,
+  `created_on` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `updated_by` varchar(100) NOT NULL,
-  `updated_on` datetime NOT NULL
+  `updated_on` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `course_category`
+--
+
+INSERT INTO `course_category` (`name`, `active`, `created_by`, `created_on`, `updated_by`, `updated_on`) VALUES
+('Computer Science & Information Systems\r\n', 0, '', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -98,10 +121,11 @@ CREATE TABLE `course_category` (
 CREATE TABLE `qualification` (
   `name` varchar(100) NOT NULL,
   `id` varchar(100) NOT NULL,
+  `active` tinyint(1) NOT NULL,
   `created_by` varchar(100) NOT NULL,
-  `created_on` datetime NOT NULL,
+  `created_on` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `updated_by` varchar(100) NOT NULL,
-  `updated_on` datetime NOT NULL
+  `updated_on` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -113,11 +137,19 @@ CREATE TABLE `qualification` (
 CREATE TABLE `region` (
   `name` varchar(100) NOT NULL,
   `continent` varchar(100) NOT NULL,
+  `active` tinyint(1) NOT NULL,
   `created_on` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `updated_on` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `created_by` varchar(100) NOT NULL,
   `updated_by` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `region`
+--
+
+INSERT INTO `region` (`name`, `continent`, `active`, `created_on`, `updated_on`, `created_by`, `updated_by`) VALUES
+('West', 'North America', 0, '2018-11-27 07:40:15', '0000-00-00 00:00:00', '', '');
 
 -- --------------------------------------------------------
 
@@ -127,11 +159,19 @@ CREATE TABLE `region` (
 
 CREATE TABLE `specialization` (
   `name` varchar(500) NOT NULL,
+  `active` int(11) NOT NULL,
   `created_on` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `updated_on` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `created_by` varchar(100) NOT NULL,
   `updated_by` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `specialization`
+--
+
+INSERT INTO `specialization` (`name`, `active`, `created_on`, `updated_on`, `created_by`, `updated_by`) VALUES
+('Engineering and Technology', 0, '2018-11-27 07:32:54', '0000-00-00 00:00:00', '', '');
 
 -- --------------------------------------------------------
 
@@ -153,6 +193,7 @@ CREATE TABLE `student` (
   `course_of_interest` varchar(2000) NOT NULL,
   `study_destination_continent` varchar(2000) NOT NULL,
   `study_destination_region` varchar(2000) NOT NULL,
+  `active` tinyint(1) NOT NULL,
   `created_on` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `updated_on` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `created_by` varchar(1000) NOT NULL,
@@ -185,11 +226,19 @@ CREATE TABLE `university` (
   `country` varchar(100) NOT NULL,
   `admission_requirement` varchar(10000) NOT NULL,
   `videos_pics_docs` varchar(100) NOT NULL,
+  `active` tinyint(1) NOT NULL,
   `created_on` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `updated_on` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `created_by` varchar(100) NOT NULL,
   `updated_by` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `university`
+--
+
+INSERT INTO `university` (`university_id`, `name`, `logo`, `email_id`, `website`, `university_ranking`, `fee_range`, `courses_category`, `qualifications_offered`, `total_number_of_students`, `total_number_of_faculty`, `age`, `accommodation`, `about_us`, `social_media_links`, `location`, `country`, `admission_requirement`, `videos_pics_docs`, `active`, `created_on`, `updated_on`, `created_by`, `updated_by`) VALUES
+('U00001', 'University of Colorado', '', '', '', 0, 0, 'Computer Science & Information Systems\r\n', '', 0, 0, 0, '', '', '', '', '', '', '', 0, '2018-11-27 07:50:38', '0000-00-00 00:00:00', '', '');
 
 -- --------------------------------------------------------
 
@@ -202,11 +251,19 @@ CREATE TABLE `university_contact` (
   `email` varchar(100) NOT NULL,
   `department` varchar(100) NOT NULL,
   `university` varchar(100) NOT NULL,
+  `active` int(11) NOT NULL,
   `created_by` varchar(100) NOT NULL,
-  `created_on` datetime NOT NULL,
+  `created_on` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `updated_by` varchar(100) NOT NULL,
-  `updated_on` datetime NOT NULL
+  `updated_on` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `university_contact`
+--
+
+INSERT INTO `university_contact` (`name`, `email`, `department`, `university`, `active`, `created_by`, `created_on`, `updated_by`, `updated_on`) VALUES
+('Head of the HR', 'hr@colorodo.com', 'HR', 'U00001', 0, '', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -219,11 +276,19 @@ CREATE TABLE `university_content` (
   `video_description` varchar(50000) NOT NULL,
   `video_category` varchar(100) NOT NULL,
   `university` varchar(100) NOT NULL,
+  `active` tinyint(1) NOT NULL,
   `created_by` varchar(100) NOT NULL,
-  `created_on` datetime NOT NULL,
+  `created_on` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `updated_by` varchar(100) NOT NULL,
-  `updated_on` datetime NOT NULL
+  `updated_on` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `university_content`
+--
+
+INSERT INTO `university_content` (`video`, `video_description`, `video_category`, `university`, `active`, `created_by`, `created_on`, `updated_by`, `updated_on`) VALUES
+('Introduction', 'Inro video', 'Introduction', 'U00001', 1, '', '2018-11-27 07:59:17', '', '0000-00-00 00:00:00');
 
 --
 -- Indexes for dumped tables
@@ -294,7 +359,7 @@ ALTER TABLE `student`
 ALTER TABLE `university`
   ADD PRIMARY KEY (`university_id`),
   ADD UNIQUE KEY `University Email` (`email_id`),
-  ADD KEY `course` (`courses_category`);
+  ADD KEY `course_category_university` (`courses_category`);
 
 --
 -- Indexes for table `university_contact`
@@ -344,7 +409,7 @@ ALTER TABLE `student`
 -- Constraints for table `university`
 --
 ALTER TABLE `university`
-  ADD CONSTRAINT `course` FOREIGN KEY (`courses_category`) REFERENCES `course` (`course_id`);
+  ADD CONSTRAINT `course_category_university` FOREIGN KEY (`courses_category`) REFERENCES `course_category` (`name`);
 
 --
 -- Constraints for table `university_contact`
